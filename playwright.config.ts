@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
+export const BASE_URL = 'https://yandex.ru';
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -14,7 +16,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: 'https://yandex.ru',
+    baseURL: BASE_URL,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     // headless: false,
